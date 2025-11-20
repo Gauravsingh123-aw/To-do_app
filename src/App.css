@@ -235,7 +235,7 @@
 .brand-text strong{display:block;font-size:1rem;color:var(--accent)}
 .brand-text small{display:block;font-size:0.75rem;color:var(--muted)}
 .nav-right{display:flex;gap:0.6rem}
-.nav-btn{background:transparent;border:1px solid rgba(16,24,40,0.06);padding:0.4rem 0.65rem;border-radius:8px;cursor:pointer}
+.nav-btn{border:1px solid rgba(16,24,40,0.06);padding:0.4rem 0.65rem;border-radius:8px;cursor:pointer}
 .nav-btn:hover{border-color:var(--accent)}
 
 /* container to center and constrain content */

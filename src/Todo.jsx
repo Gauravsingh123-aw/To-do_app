@@ -44,23 +44,7 @@ export default function Todo() {
     return (
         <div className="page-wrap">
             <div className="main-todo container page-grid">
-                <aside className="side-left">
-                    <div className="panel actions-panel">
-                        <h4>Quick Actions</h4>
-                        <div className="actions">
-                            <button className="create-cta" onClick={handleNewNote}>New Note</button>
-                            <button className="nav-btn" onClick={() => setNotes([])}>Clear All</button>
-                        </div>
-                        <hr />
-                        <h4>Tags</h4>
-                        <div className="tags">
-                            <button className="tag">Personal</button>
-                            <button className="tag">Work</button>
-                            <button className="tag">Ideas</button>
-                            <button className="tag">Later</button>
-                        </div>
-                    </div>
-                </aside>
+                
                 {/* navbar */}
                 <nav className="navbar">
                 <div className="nav-left">
@@ -73,7 +57,7 @@ export default function Todo() {
                     </div>
                 </div>
                 <div className="nav-right">
-                    <div className="nav-actions">
+                    <div className=" ">
                         <button className="nav-btn" onClick={() => navigate('/')}>Home</button>
                         <button className="nav-btn" onClick={() => navigate('/box')}>Board</button>
                         <button className="nav-btn" onClick={() => setTheme(t => t === 'light' ? 'dark' : 'light')}>

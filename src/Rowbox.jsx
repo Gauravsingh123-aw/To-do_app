@@ -5,6 +5,9 @@ import { FaEdit } from "react-icons/fa";
 
 export default function Rowbox(prop) {
     const [data, setData] = useState(prop.prop);
+    let handleDelete=()=>{
+        alert("do you want to delete")
+    }
     return (
 
         <div className="main-rowbox">
@@ -14,7 +17,7 @@ export default function Rowbox(prop) {
             </div>
             <div className="row-actions">
                 <FaEdit className="action-icon edit" />
-                <IoIosRemoveCircle className="action-icon delete" />
+                <IoIosRemoveCircle className="action-icon delete" onClick={handleDelete}/>
             </div>
         </div>
 
