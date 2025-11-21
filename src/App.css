@@ -4,9 +4,10 @@
 }
 #root {
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem 1rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .logo {
@@ -242,11 +243,13 @@
 .container{
   /* allow the grid to expand to full width so side panels are used */
   max-width: none;
-  width: 100%;
+  /* width: 100%; */
   margin: 0 auto;
   padding: 0 2rem;
 }
-
+.page-wrap{
+  width: 100%;
+}
 .title-heading{
   display:flex;
   justify-content:space-between;
