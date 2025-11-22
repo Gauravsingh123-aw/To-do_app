@@ -6,7 +6,7 @@ import { FaEdit } from "react-icons/fa";
 export default function Rowbox(prop) {
     const [data, setData] = useState(prop.prop);
     let handleDelete=()=>{
-        alert("do you want to delete")
+       
     }
     return (
 
