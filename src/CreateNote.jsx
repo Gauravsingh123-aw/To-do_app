@@ -6,6 +6,7 @@ export default function CreateNote(prop) {
     let setNotesData=prop.flag2;
 
     let [data, setData] = useState({title:"",body:""});
+    let [error,setError]=useState("");
     let handleCancel=()=>{
         setNotes(false);
     }
@@ -16,8 +17,15 @@ export default function CreateNote(prop) {
         setData({...data,[name]:value});
     }
     let handleSavenote=()=>{
+        if(!(data.title=="" || data.body=="")){
+        setError("");
         setNotesData(note=>[...note,data]);
         setData({title:"",body:""})
+        }
+        else{
+            let err= data.title==""?"enter title":"enter body"
+            setError(err)
+        }
     }
     return (
         <div className="createnote-main">
@@ -27,6 +35,7 @@ export default function CreateNote(prop) {
                 <MdCancel className="action-buttons1" onClick={handleCancel}/>
                 <FcApproval className="action-buttons1" onClick={handleSavenote} />
             </div>
+            <div>{error}</div>
         </div>
 
     )

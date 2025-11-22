@@ -8,7 +8,7 @@ import CreateNote from "./CreateNote";
 export default function Todo() {
     const navigate = useNavigate();
     const [newNote, setNewNote] = useState(false);
-    const [notes, setNotes] = useState([]);
+    const [notes, setNotes] = useState([]); // storage
     const [selectedColor, setSelectedColor] = useState('indigo');
     const [theme, setTheme] = useState(() => {
         try {
