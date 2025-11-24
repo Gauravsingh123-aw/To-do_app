@@ -38,7 +38,7 @@ export default function Todo() {
         try { localStorage.setItem('qnotes-theme', theme); } catch (e) {}
     }, [theme]);
 
-    const handleRowbox = () => navigate("/box");
+
     const handleNewNote = () => setNewNote(true);
 
     return (
@@ -100,7 +100,7 @@ export default function Todo() {
                         {newNote === true && <CreateNote flag={setNewNote} flag2={setNotes} />}
                         {notes.length ? (
                             notes.map((ele, ind) => (
-                                <div onClick={handleRowbox} key={ind}><Rowbox prop={ele} /></div>
+                                <div  key={ind}><Rowbox prop={ele}  prop2={setNotes}/></div>
                             ))
                         ) : (
                             <div className="empty-state">No notes yet — add one to get started <RiEditBoxLine /></div>

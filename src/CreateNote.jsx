@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { FcApproval } from "react-icons/fc";
 import { MdCancel } from "react-icons/md";
+import {nanoid} from "nanoid"
 export default function CreateNote(prop) {
     let setNotes=prop.flag;
     let setNotesData=prop.flag2;
@@ -14,11 +15,13 @@ export default function CreateNote(prop) {
     let handleInput=(event)=>{
         let name=event.target.name;
         let value=event.target.value;
-        setData({...data,[name]:value});
+        const id=nanoid(10);
+        setData({...data,[name]:value,uid:id});
     }
     let handleSavenote=()=>{
         if(!(data.title=="" || data.body=="")){
         setError("");
+        // console.log(data);
         setNotesData(note=>[...note,data]);
         setData({title:"",body:""})
         }

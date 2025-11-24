@@ -1,27 +1,26 @@
-import { useState } from "react";
-import { IoIosRemoveCircle} from "react-icons/io";
-import { FaEdit } from "react-icons/fa";
+
 import { IoArrowBackCircle } from "react-icons/io5";
 import "./App.css"
-import { useNavigate } from "react-router-dom";
-export default function Box(){
-    let navigate=useNavigate();
-    let handleBack=()=>{
-        navigate(-1);
+import { useState } from "react";
+
+export default function Box(prop){
+    let setFlag=prop.setFlagfun;
+    let data=prop.data;
+    let setNote=prop.setFun;
+    // let [state,setState]=useState({});
+    let handleChange=()=>{
+        let name=event.target.name;
+        let value=event.target.value;
+        let obj={}
     }
     return(
         <div className="box-main">
-            <IoArrowBackCircle className="left-arrow"  onClick={handleBack}/>
+            <IoArrowBackCircle className="left-arrow"  onClick={()=>setFlag(false)}/>
         <div className="main-container">
-            <div className="title-box">
-                <span>Title</span>
-                <span><FaEdit /><IoIosRemoveCircle /></span>
+            <div className="title-box"><input defaultValue={data.title} onChange={handleChange} name="title"/>
             </div>
             <div className="body-box">
-                Body
-                sksl
-                sksla
-
+                <textarea defaultValue={data.body} onChange={handleChange} name="body"/>
             </div>
         </div>
         </div>
